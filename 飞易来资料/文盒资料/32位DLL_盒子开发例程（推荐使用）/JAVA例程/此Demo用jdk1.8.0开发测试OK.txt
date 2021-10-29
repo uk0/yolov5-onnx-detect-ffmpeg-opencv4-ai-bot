@@ -1,0 +1,6 @@
+1、此DEMO使用JNI技术开发
+2、msdkDllBridge.dll、msdkDllBridge.class是桥接DLL和类，运行时必须有这个DLL和class文件
+3、具体接口说明请看.h文件
+4、必须使用32位java才能运行本demo
+
+java调用dll除了本例程提供的JNI技术外，还可以使用JNative方式、JNA方式，具体方法请自行百度搜索。

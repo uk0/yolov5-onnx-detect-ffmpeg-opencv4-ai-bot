@@ -1,0 +1,29 @@
+支持按键精灵2014，不保证能支持按键精灵9
+所有demo都是在按键精灵2014下测试通过
+
+1、如果是32位windows，请将该目录里的msdk.dll拷贝system32目录下，该路径一般是c:\windows\system32\
+   如果是64位windows，请将该目录里的msdk.dll拷贝syswow64目录下，该路径一般是c:\windows\syswow64\
+   注意：某些机器上，运行脚本可能没有响应，请将msdk.dll拷贝到按键精灵安装目录下试一下，该目录一般是c:\Program Files\按键精灵2014\
+2、用按键精灵导入msdk_demo.Q、SimpleDemo.Q等各个脚本例程就可以调试了。可以参考该例程来编写您的脚本。
+   如果不知道怎么导入，可以将这几个Q文件直接拷贝到按键精灵的QMScript目录下，该目录一般是c:\Program Files\按键精灵2014\QMScript\
+3、按键精灵有一个问题: 打开端口后如果不关闭端口，再次打开端口就会出错。
+   必须要关闭按键精灵，再重新打开按键精灵才可以再次正常打开端口。
+   最好关闭端口后再停止脚本，或者使用其他语言如易语言/VB/VC/Delphi/C#写脚本。
+
+注意：由于按键精灵不支持ByRef，无法调用msdk中的M_GetCurrMousePos接口，只能在按键精灵脚本中实现取当前鼠标坐标的功能。
+
+注意：msdk_demo.Q是一个有对话框界面的例程。
+      SimpleDemo.Q是一个简单的没有对话框界面的例程，只操作1个盒子，操作端口1的盒子。
+      SimpleDemo_Port2.Q是一个简单的没有对话框界面的例程，只操作1个盒子，操作端口2的盒子。
+      SimpleDemo_Port2.Q是一个简单的没有对话框界面的例程，操作2个盒子，分别操作端口1和端口2的盒子。
+      SimpleDemo_OpenVidPid.Q是一个简单的没有对话框界面的例程，打开、操作指定VID、PID的盒子。
+      修改VidPid.Q 这个例程演示如何调用修改VID/PID的接口，只能支持可修改单双头盒子。
+
+注意：按键精灵里，VK_XX定义的不是一个整数变量，而是一个字符串，不能直接用VK_XX
+      比如： 按键精灵里  VK_TAB不是一个整数常量，而是一个字符串，不能直接将VK_XX当成参数，否则会出错。
+      比如按回车键， 写成这样会出错：Call M_KeyPress2(M_Handle, VK_RETURN, 1) 
+      应该先查VK_RETURN的值是13，将13作为参数，正确的写法是：Call M_KeyPress2(M_Handle, 13, 1) 
+
+      最简单的，就是别用VK_XX，直接用我们定义的变量Keyboard_a，写成：Call M_KeyPress(M_Handle, Keyboard_a, 1) 
+
+

@@ -1,0 +1,8 @@
+请将demo.au3和msdk.dll拷贝到autoit3目录下
+
+在命令行中执行 autoit3.exe demo.au3 就可以
+
+本例程没有调用msdk.dll中的所有接口
+但是已经提供所有典型接口的调用例子，包括指针、字符串等。
+请一定参考msdk使用说明书理解本例程如何调用msdk.dll中的接口。
+

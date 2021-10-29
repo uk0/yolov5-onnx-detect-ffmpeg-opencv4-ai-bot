@@ -1,0 +1,5 @@
+D:\work\UI_fm8pu83\pcsoft\c#例程\obj\Release\ResolveAssemblyReference.cache
+D:\work\UI_fm8pu83\pcsoft\c#例程\bin\Release\msdk_DEMO.exe
+D:\work\UI_fm8pu83\pcsoft\c#例程\bin\Release\msdk_DEMO.pdb
+D:\work\UI_fm8pu83\pcsoft\c#例程\obj\Release\msdk_DEMO.exe
+D:\work\UI_fm8pu83\pcsoft\c#例程\obj\Release\msdk_DEMO.pdb
